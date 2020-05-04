@@ -1,0 +1,41 @@
+--- configure.in.orig	2018-12-19 10:19:41.279576000 +0000
++++ configure.in	2018-12-19 14:20:50.950185000 +0000
+@@ -779,33 +779,13 @@
+   AC_MSG_ERROR([no MPI support found on system])
+ fi
+ 
+-# netCDF support
++# netCDF support - hardcode for IC HPC
+ AC_LANG_PUSH([C])
+-AC_ARG_WITH(netcdf,
+-[AC_HELP_STRING([--with-netcdf@<:@=netcdf_ROOT@:>@],
+-[specify where to find lib/ and include/ for netCDF])])
++AC_DEFINE(HAVE_LIBNETCDF, [1])
++AC_DEFINE(HAVE_LIBNETCDFF, [1])
++LIBS="$LIBS $NETCDF_LIBS"
++CPPFLAGS="$CPPFLAGS $NETCDF_INCLUDE"
+ 
+-# allow various synonyms to disable NetCDF
+-if test -z "$with_netcdf" ; then
+-  if test "$enable_netcdf" = no; then
+-    with_netcdf=no
+-  elif test "$enable_NetCDF" = no; then
+-    with_netcdf=no
+-  elif test "$with_NetCDF" != "yes" ; then
+-    if test -n "$with_NetCDF" ; then
+-      with_netcdf="$with_NetCDF"
+-    fi
+-  fi
+-fi
+-if test "$with_netcdf" != "no" ; then
+-  if test -n "$with_netcdf" ; then
+-    if test "$with_netcdf" != "yes" ; then
+-      LIBS="$LIBS -L$with_netcdf"
+-    fi
+-  fi
+-  ACX_lib_automagic(netcdf, nc_create, [AC_DEFINE(HAVE_LIBNETCDF, [1])])
+-  ACX_lib_fautomagic(netcdff, nccre, [AC_DEFINE(HAVE_LIBNETCDFF, [1])])
+-fi
+ 
+ # Exodus-II support
+ HAVE_EXODUSII=no

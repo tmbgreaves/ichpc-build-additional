@@ -1,0 +1,11 @@
+--- tools/Makefile.in.orig	2020-04-29 13:47:53.298985000 +0100
++++ tools/Makefile.in	2020-04-29 13:48:04.559118000 +0100
+@@ -42,7 +42,7 @@
+ 
+ FLLINKER = @FLLINKER@ @LDFLAGS@ $(FCFLAGS)
+ 
+-LIBS = -L../lib ./lib/libadaptivity.a ./lib/libH5hutF.a ./lib/libH5hut.a @HDF5_LIBS@ @LIBSPATIALINDEX@ @SPUDLIB@ ./lib/libvtkfortran.a @FLIBJUDY@ @LIBS@ @BLAS_LIBS@ @LIB_FEMDEM@
++LIBS = -L../lib ./lib/libadaptivity.a ./lib/libH5hutF.a ./lib/libH5hut.a @HDF5_LIBS@ @LIBSPATIALINDEX@ @SPUDLIB@ ./lib/libvtkfortran.a @FLIBJUDY@ @LIBS@ @BLAS_LIBS@ @LIB_FEMDEM@ $(VTK_LIBS)
+ FLIBS = -L../lib @FLIBS@
+ 
+ # These objects are needed in each program as they provide the code related to

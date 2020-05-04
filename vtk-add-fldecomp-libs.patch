@@ -1,0 +1,11 @@
+--- fldecomp/Makefile.in.orig	2020-04-29 19:46:20.416385000 +0100
++++ fldecomp/Makefile.in	2020-04-29 19:46:45.277874000 +0100
+@@ -43,7 +43,7 @@
+ LIB_FLUIDITY = ../lib/libfluidity.a
+ LIBS    = -L../lib $(LIB_FLUIDITY)  @LIB_FEMDEM@ \
+ 	../lib/libadaptivity.a ../lib/libvtkfortran.a \
+-	@LIBSPATIALINDEX@ @SPUDLIB@ @LIBS@ @BLAS_LIBS@
++	@LIBSPATIALINDEX@ @SPUDLIB@ @LIBS@ @BLAS_LIBS@ $(VTK_LIBS)
+ 
+ OBJS = fldmain.o fldgmsh.o fldtriangle.o partition.o
+ 
