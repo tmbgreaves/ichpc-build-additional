@@ -33,9 +33,9 @@ git clone ${FLUIDITY_GIT_URL} fluidity-${FLUIDITY_VERSION}${FLUIDITY_SUFFIX}
 pushd ${FLUIDITY_BUILDDIR}
 git reset --hard ${FLUIDITY_VERSION}
 
-# Set TMPDIR For h5hut
+# Set up TMPDIR For h5hut
 export TMPDIR=${PREFIX}/tmp
-
+mkdir -p ${PREFIX}/tmp
 
 #### CHANGE THE PATCH LOCATION TO YOUR PATCH DIRECTORY
 #
