@@ -1,4 +1,4 @@
-# Fluidity additional build details for IC HPC
+# Fluidity/FETCH2 additional build details for IC HPC
 
 Updated: 2020-05-04
 
