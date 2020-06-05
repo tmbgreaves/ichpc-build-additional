@@ -76,6 +76,6 @@ autoconf
 ${FETCH_DIR}/configure --enable-2d-adaptivity
 
 # Build
-make all -j 8
+make bin/fetch -j 8
 
 popd
