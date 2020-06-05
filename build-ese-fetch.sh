@@ -31,6 +31,7 @@ if [ ! -d ${FLUIDITY_DIR} ]; then
 fi
 
 # Checkout the branch with the VTK9 fixes
+pushd ${FETCH_DIR}
 pushd ${FLUIDITY_DIR}
 git pull
 git checkout ${FLUIDITY_VERSION}
