@@ -1,0 +1,11 @@
+--- Makefile.in	2020-06-05 21:33:09.984044964 +0100
++++ Makefile.in	2020-06-05 21:36:18.132133249 +0100
+@@ -49,7 +49,7 @@
+        ./fluidity/lib/libH5hutF.a ./fluidity/lib/libH5hut.a \
+ 			 ./fluidity/lib/libvtkfortran.a \
+        ./fluidity/lib/libspatialindex.a @SPUDLIB@ ./fluidity/lib/libjudy.a \
+-       @LIBS@ @BLAS_LIBS@
++       @LIBS@ @BLAS_LIBS@ $(VTK_LIBS)
+ 
+ OBJS = $(shell find . -mindepth 2 -maxdepth 2 -name '*.c' -o -name '*.cpp' -o -name '*.[fF]' -o -name '*.F90' | grep -v ^./lib | xargs)
+ MAKE = @MAKE@ -s
