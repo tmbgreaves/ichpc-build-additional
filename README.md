@@ -2,7 +2,7 @@
 
 Updated: 2020-05-04
 
-If you have been directed here from the IC HPC ese-fluidity-dev module, please make use of the five patches and build script to get a working Fluidity build on CX1 or CX2.
+If you have been directed here from the IC HPC ese-fluidity-dev module, please make use of the five patches and build script to get a working Fluidity build for runs on CX3.
 
 The build script needs some edits, particularly to variables defining your build environment, which have been flagged in comments. You may also want to remove the install command and following script backup and module write if you're just running from a local build directory.
 
