@@ -10,7 +10,7 @@ The patches deal with making sure Fluidity only uses the ese module versions of 
 
 # Runtime requirements for using CX3
 
-Users report that the following are required in PBS scripts for successful running on IC HPC, specifically using CX3 nodes as CX1 and CX2 hardware has known issues with Fluidity.
+Users report that the following are tested in PBS scripts for successful running on IC HPC, specifically using CX3 nodes as CX1 and CX2 hardware has known issues with Fluidity.
 
 ```
 Wall time: 72:00:00
